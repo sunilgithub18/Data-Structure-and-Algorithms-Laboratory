@@ -58,7 +58,6 @@ class CollusionHandling:
         self.linearCount=0
         pos=self.has_key(phoneNo)
         recFound=False
-        searchRemaining=False
         phone=0
         
         if self.linearHash[pos] != None:
@@ -81,12 +80,6 @@ class CollusionHandling:
                                     recFound=True
                             #break
                         index =  (index+1)%self.bucketSize
-        
-                    #Table search exausted
-                    if not recFound:
-                        print("Phone number not found!!")
-        
-                    print("Number of records searched in table to find a key is :",self.linearCount)
         
         #Table search exausted
         if not recFound:
